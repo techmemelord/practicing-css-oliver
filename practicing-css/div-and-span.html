@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        background-color: black;
+        color: pink;
+        font-family: system-ui;
+      }
+
+      h1 {
+        text-align: center;
+        font-weight: 700;
+        font-size: 50px;
+      }
+      ul {
+        list-style-type: none;
+      }
+      #styled-by-id {
+        font-family: Georgia, Cambria, Serif;
+        font-weight: bold;
+      }
+      h2 {
+        color: darkmagenta;
+        background-color: khaki;
+        font-style: italic;
+      }
+
+      li {
+        margin: 10px;
+        font-size: 20px;
+        display: inline-block;
+      }
+      .nav-link {
+        padding: 5px;
+        margin: 4px;
+        border: 2px solid pink;
+        background-color: #191970;
+        color: #f5f5ff;
+      }
+
+      span {
+        background-color: pink;
+        font-style: italic;
+      }
+      div {
+        height: 180px;
+        width: auto;
+        background-color: ghostwhite;
+        color: black;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divs and Spans</title>
+  </head>
+  <body>
+    <header>
+      <h1>Divs and Spans</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a class="nav-link" href="index.html">Inline CSS</a></li>
+        <li><a class="nav-link" href="internal-css.html">Internal CSS</a></li>
+        <li><a class="nav-link" href="external-css.html">External CSS</a></li>
+        <li>
+          <a class="nav-link" href="testing-cascading.html"
+            >Testing Cascading</a
+          >
+        </li>
+        <li><a class="nav-link" href="#">Classes and IDs</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <div>
+        <p>This shows the effects of adding internal CSS to HTML tags.</p>
+        <p>This website is about MIAMI</p>
+        <p>By: Oliver</p>
+        <p>Web Development</p>
+        </div>
+      </section>
+      <section>
+        <div>
+        <h2>PC Hardware</h2>
+        <p>Favorite Part: PC Dissasembly and Assembly</p>
+        <p>Least Favorite Part: Random Encounters</p>
+        </div>
+      </section>
+      <section>
+        <div>
+        <h2>Web Development</h2>
+        <p>Favorite Part: HTML Project and learning CSS</p>
+        <p>Least Favorite Part: Having to relearn the first unit</p>
+        </div>
+      </section>
+      <p id="styled-by-id">
+        <div>
+        This paragraph will show the effect of giving an ID and <span>styling</span> that ID
+        </div>
+      </p>
+    </main>
+  </body>
+</html>

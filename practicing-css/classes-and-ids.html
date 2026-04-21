@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        background-color: black;
+        color: pink;
+        font-family: system-ui;
+      }
+
+      h1 {
+        text-align: center;
+        font-weight: 700;
+        font-size: 50px;
+      }
+      ul {
+        list-style-type: none;
+      }
+      #styled-by-id {
+        font-family: Georgia, Cambria, Serif;
+        font-weight: bold;
+      }
+      h2 {
+        color: darkmagenta;
+        background-color: khaki;
+        font-style: italic;
+      }
+      .heading-paragraph {
+        font-size: 32px;
+      }
+      li {
+        margin: 10px;
+        font-size: 20px;
+        display: inline-block;
+      }
+      .nav-link {
+        padding: 5px;
+        margin: 4px;
+        border: 2px solid pink;
+        background-color: #191970;
+        color: #f5f5ff;
+      }
+      [role="alert"] {
+        padding: 10px;
+        border: 2px dashed pink;
+        border-radius: 4px;
+        background: black;
+        color: pink;
+        font-style: italic;
+        text-align: center;
+        font-size: 32px;
+        text-decoration: underline;
+      }
+      #alert-trigger {
+        background-color: pink;
+        color: black;
+        border: 2px solid black;
+        padding: 5px;
+        font-weight: bold;
+        font-size: 24px;
+        cursor: pointer;
+      }
+      [role="alert"]:empty {
+        display: none;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classes and IDs</title>
+  </head>
+  <body>
+    <header>
+      <h1>Classes and IDs</h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a class="nav-link" href="index.html" aria-label="Inline CSS Link"
+            >Inline CSS</a
+          >
+        </li>
+        <li>
+          <a
+            class="nav-link"
+            href="internal-css.html"
+            aria-label="Internal CSS Link"
+            >Internal CSS</a
+          >
+        </li>
+        <li>
+          <a
+            class="nav-link"
+            href="external-css.html"
+            aria-label="External CSS Link"
+            >External CSS</a
+          >
+        </li>
+        <li>
+          <a
+            class="nav-link"
+            aria-label="Testing Cascading"
+            href="testing-cascading.html"
+            >Testing Cascading</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" aria-label="Classes and IDs" href="#"
+            >Classes and IDs</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <p class="heading-paragraph">
+          This shows the effects of adding internal CSS to HTML tags.
+        </p>
+        <p>This website is about MIAMI</p>
+        <p>By: Oliver</p>
+        <p>Web Development</p>
+      </section>
+      <section>
+        <h2 class="heading-paragraph" aria-label="PC Hardware">PC Hardware</h2>
+        <p>Favorite Part: PC Dissasembly and Assembly</p>
+        <p>Least Favorite Part: Random Encounters</p>
+      </section>
+      <section>
+        <h2 class="heading-paragraph" aria-label="Web Development">
+          Web Development
+        </h2>
+        <p>Favorite Part: HTML Project and learning CSS</p>
+        <p>Least Favorite Part: Having to relearn the first unit</p>
+      </section>
+      <p id="styled-by-id">
+        This paragraph will show the effect of giving an ID and styling that ID
+      </p>
+      <button
+        type="button"
+        id="alert-trigger"
+        aria-label="Button that says how do you spell smart?">
+        How do you spell smart?
+      </button>
+
+      <div id="example" role="alert"></div>
+
+      <script type="text/template" id="alert-template">
+        <p aria-label="You spell smart as S-M-R-T">S-M-R-T</p>
+      </script>
+      <script>
+        "use strict";
+
+        window.addEventListener("load", function () {
+          var button = document.getElementById("alert-trigger");
+
+          button.addEventListener("click", addAlert);
+        });
+
+        /*
+         * @function addAlert
+         *
+         * @desc Adds an alert to the page
+         *
+         * @param   {object}  event  -  Standard W3C event object
+         *
+         */
+
+        function addAlert() {
+          var example = document.getElementById("example");
+          var template = document.getElementById("alert-template").innerHTML;
+
+          example.innerHTML = template;
+        }
+      </script>
+    </main>
+  </body>
+</html>
